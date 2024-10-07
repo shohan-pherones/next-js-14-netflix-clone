@@ -1,11 +1,12 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { signIn } from "next-auth/react";
 import Image from "next/image";
 
 const GoogleSignInButton = () => {
   return (
-    <Button variant="outline" size="icon">
+    <Button onClick={() => signIn("google")} variant="outline" size="icon">
       <Image
         src="/google.svg"
         alt="Google icon"
